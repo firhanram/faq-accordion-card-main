@@ -2,6 +2,10 @@
 
 ![Design preview for the FAQ Accordion Card coding challenge](./design/desktop-preview.jpg)
 
+## URL
+
+https://faq-accordion-card-main-wheat.vercel.app/
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
