@@ -1,0 +1,185 @@
+:root {
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+html {
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  color: hsla(240, 5%, 91%, 0.3);
+  margin-top: 1rem;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  /* padding: 5rem 0; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0 3rem 5rem 2.5rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 2fr;
+  row-gap: 3rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.illustration {
+  position: relative;
+  text-align: center;
+}
+
+.illustration svg:nth-child(1) {
+  position: absolute;
+  /* top: -11rem; */
+  transform: translate(-10%, -50%);
+}
+
+.illustration svg:nth-child(2) {
+  position: relative;
+  left: 5px;
+  margin-top: 0.5;
+}
+
+.illustration svg:nth-child(3) {
+  display: none;
+}
+
+.illustration svg:nth-child(5) {
+  display: none;
+}
+
+.illustration img {
+  display: none;
+}
+
+.faq-container h2 {
+  color: var(--very-dark-desaturated-blue);
+  text-align: center;
+  font-size: 3rem;
+}
+
+.faq-container {
+  display: grid;
+  grid-template-rows: auto repeat(5, auto);
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+}
+
+.question h4 {
+  font-size: 1.3rem;
+  color: var(--very-dark-grayish-blue);
+  font-weight: normal;
+}
+
+.question h4:hover {
+  color: var(--soft-red);
+}
+
+.faq-box {
+  cursor: pointer;
+}
+
+.faq-box.active .faq-body .question h4 {
+  font-weight: bold;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.faq-box.active .question svg {
+  transform: rotate(180deg);
+}
+
+.faq-body .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer p {
+  color: var(--dark-grayish-blue);
+  margin-top: 1.2rem;
+}
+
+.faq-box.active .answer {
+  display: block;
+}
+
+.answer {
+  display: none;
+}
+
+.attribution {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+    width: 90%;
+    max-width: 921.6px;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    grid-template-columns: repeat(2, 1fr);
+    background: url("../images/illustration-woman-online-desktop.svg") no-repeat -18%
+        center,
+      url("../images/bg-pattern-desktop.svg") no-repeat -55rem -30rem;
+    background-color: white;
+  }
+
+  .illustration svg:nth-child(1) {
+    display: none;
+  }
+
+  .illustration svg:nth-child(2) {
+    display: none;
+  }
+
+  .illustration img {
+    display: block;
+    position: absolute;
+    transform: translate(-55%, 45%);
+  }
+
+  .illustration svg:nth-child(5) {
+    display: none;
+  }
+
+  .faq-container {
+    padding-right: 6rem;
+  }
+
+  .faq-container h2 {
+    text-align: initial;
+  }
+}
